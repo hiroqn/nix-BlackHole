@@ -1,0 +1,11 @@
+= nix-BlackHole
+nix file for https://github.com/ExistentialAudio/BlackHole
+
+== build & install
+
+simple way
+
+. clone this repo
+. `result=$(nix-build --no-out-link -E "(import <nixpkgs> {}).callPackage ./default.nix {}")
+`
+. `cp -r $result/Library/Audio/Plug-Ins/HAL/BlackHole2ch.driver /Library/Audio/Plug-Ins/HAL/`
